@@ -5,6 +5,7 @@
   "env": {
     "FIREBASE_API_KEY": "@point-firebase-api-key",
     "FIREBASE_MESSAGING_SENDER_ID": "@point-firebase-msi",
-    "FIREBASE_APP_ID": "@point-firebase-app-id"
+    "FIREBASE_APP_ID": "@point-firebase-app-id",
+    "FIREBASE_ADMIN_JSON": "@point-firebase-admin"
   }
 }
