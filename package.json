@@ -1,0 +1,11 @@
+{
+  "name": "point-challenge",
+  "version": "1.0.0",
+  "description": "minimal twitter-like GraphQL API",
+  "author": "Max Beatty",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "firebase": "^6.4.2"
+  }
+}
