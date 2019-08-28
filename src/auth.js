@@ -1,15 +1,16 @@
-const { auth } = require("./firebase");
+const { firebase } = require("./firebase");
 
-module.exports = method => async (req, res) => {
+exports.createHandler = method => async (req, res) => {
   const { email, password } = req.body;
-  console.debug(`handling ${method} ${email}`);
 
   try {
-    const { user } = await auth[
-      method === "create"
-        ? "createUserWithEmailAndPassword"
-        : "signInWithEmailAndPassword"
-    ](email, password);
+    const { user } = await firebase
+      .auth()
+      [
+        method === "create"
+          ? "createUserWithEmailAndPassword"
+          : "signInWithEmailAndPassword"
+      ](email, password);
 
     res.json({ token: await user.getIdToken() });
   } catch (error) {

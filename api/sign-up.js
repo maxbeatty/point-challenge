@@ -1,3 +1,1 @@
-const auth = require("../src/auth");
-
-module.exports = auth("create");
+module.exports = require("../src/auth").createHandler("create");
