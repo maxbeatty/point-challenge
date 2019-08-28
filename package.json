@@ -5,7 +5,42 @@
   "author": "Max Beatty",
   "license": "ISC",
   "private": true,
+  "scripts": {
+    "test": "eslint . && jest ."
+  },
   "dependencies": {
-    "firebase": "^6.4.2"
+    "apollo-server-micro": "^2.9.0",
+    "firebase": "^6.4.2",
+    "firebase-admin": "^8.4.0",
+    "graphql": "^14.5.3",
+    "uid-promise": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "es6": true
+    },
+    "extends": [
+      "plugin:prettier/recommended"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
